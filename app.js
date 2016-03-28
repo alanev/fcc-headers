@@ -10,15 +10,18 @@ const host = process.env.HOST || 'localhost';
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.htm'));
 
 app.get('/api', (req, res) => {
-    let ipaddress = req.headers['X-Forwarded-For'] || 
-                    req.headers['x-forwarded-for'] || 
+    
+    let hs = req.headers;
+    
+    let ipaddress = hs['X-Forwarded-For'] || 
+                    hs['x-forwarded-for'] || 
                     req.connection.remoteAddress;
                     
-    let language = req.headers['Accept-Language'] ||
-                    req.headers['accept-language']
+    let language = hs['Accept-Language'] ||
+                    hs['accept-language']
     
-    let software = req.headers['User-Agent'] ||
-                    req.headers['user-agent']
+    let software = hs['User-Agent'] ||
+                    hs['user-agent']
     
     res.send({
         ipaddress: ipaddress,
