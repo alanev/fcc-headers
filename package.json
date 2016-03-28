@@ -1,0 +1,26 @@
+{
+  "name": "fcc-timestamp",
+  "version": "1.0.0",
+  "description": "Code for FreeCodeCamp challange 'Request Header Parser Microservice'",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanev/fcc-timestamp.git"
+  },
+  "keywords": [
+    "freecodecamp"
+  ],
+  "author": "e@alanev.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanev/fcc-timestamp/issues"
+  },
+  "homepage": "https://github.com/alanev/fcc-timestamp#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
